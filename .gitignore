@@ -1,0 +1,77 @@
+# ======================
+# Node.js
+# ======================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ======================
+# TypeScript
+# ======================
+dist/
+build/
+*.tsbuildinfo
+
+# ======================
+# Environment variables
+# ======================
+.env
+.env.*
+!.env.example
+
+# ======================
+# Firebase / Secrets
+# ======================
+firebase-service-account.json
+serviceAccountKey.json
+
+# ======================
+# Logs
+# ======================
+logs/
+*.log
+
+# ======================
+# OS files
+# ======================
+.DS_Store
+Thumbs.db
+
+# ======================
+# IDEs / Editors
+# ======================
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+*.swp
+
+# ======================
+# Docker
+# ======================
+docker-data/
+docker-volumes/
+
+# ======================
+# Coverage / Tests
+# ======================
+coverage/
+
+# ======================
+# React Native (futuro)
+# ======================
+android/.gradle
+android/app/build
+android/build
+ios/build
+ios/Pods
+ios/DerivedData
+
+# ======================
+# Misc
+# ======================
+*.pem
+*.key
+*.crt
