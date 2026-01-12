@@ -1,3 +1,4 @@
+import "dotenv/config";
 import { buildApp } from './shared/app'
 
 const app = buildApp()
