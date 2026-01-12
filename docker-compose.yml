@@ -1,0 +1,29 @@
+version: '3.9'
+
+services:
+  postgres:
+    image: postgres:16
+    container_name: letty-postgres
+    environment:
+      POSTGRES_DB: letty
+      POSTGRES_USER: letty
+      POSTGRES_PASSWORD: letty
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  backend:
+    build: .
+    container_name: letty-backend
+    env_file:
+      - .env
+    ports:
+      - "3000:3000"
+    depends_on:
+      - postgres
+    environment:
+      DATABASE_URL: postgresql://letty:letty@postgres:5432/letty
+
+volumes:
+  postgres_data:
