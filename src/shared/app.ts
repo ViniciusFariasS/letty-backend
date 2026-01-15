@@ -2,6 +2,7 @@ import Fastify from 'fastify'
 import { healthRoutes } from '../modules/health/health.routes'
 import { homeRoutes } from '../modules/home/home.routes'
 import { userRoutes } from '../modules/user/user.routes'
+import { commerceRoutes } from '../modules/commerce/commerce.routes'
 
 export function buildApp() {
   const app = Fastify({ logger: true })
@@ -9,6 +10,7 @@ export function buildApp() {
   app.register(healthRoutes, { prefix: '/health' })
   app.register(homeRoutes, { prefix: '/home' })
   app.register(userRoutes, { prefix: '/user' })
+  app.register(commerceRoutes, { prefix: '/commerce' })
 
   return app
 }
